@@ -1,0 +1,176 @@
+# Notation Québec — travail en cours
+# Consulté le 2026-09-17. Scrutin le 2026-10-05 : à revalider après.
+# Axe Société : S1 et S5 notés. S2, S3, S4, S6, S7 restent à sourcer.
+# Axe Économie : seul le PLQ est entamé (voir exemple_notation.yaml).
+
+quebec:
+
+  Ghazal:            # Québec solidaire
+    as_of: "2026-09-17"
+    souverainete: independantiste
+    S1:
+      note: -2
+      just: >
+        Seuil d'immigration permanente porté à 70 000 par année (contre 45 000).
+        Rétablissement intégral du PEQ et régionalisation sous forme de PEQ
+        régionaux.
+      src: [lapresse_qs_seuils, lapresse_promesses_immigration]
+    S5:
+      note: -1
+      just: >
+        Favorable au principe de laïcité des institutions, mais opposé à
+        l'interdiction du port de signes religieux pour les employés de l'État
+        en position d'autorité prévue par la Loi 21.
+      src: [lapresse_laicite_engagements]
+
+  Milliard:          # Parti libéral du Québec
+    as_of: "2026-09-17"
+    souverainete: federaliste
+    S1:
+      note: -1
+      just: >
+        Seuil permanent oscillant entre 45 000 et 70 000 par année. Allonge de
+        six mois à deux ans le délai avant que l'État communique uniquement en
+        français avec les nouveaux arrivants, et ramène à six semaines l'attente
+        pour l'accès à la francisation.
+      src: [lapresse_promesses_immigration]
+    S5:
+      note: -1
+      just: >
+        S'engage à ne pas renouveler la disposition dérogatoire qui protège la
+        Loi 21. Le PQ en déduit que cela mettrait fin à la laïcité telle que
+        conçue au Québec — formulation partisane, mais la mesure est bien la
+        non-reconduction.
+      src: [lapresse_laicite_engagements, pq_communique_laicite]
+      contest: >
+        Score discutable : Milliard ne réclame pas l'abrogation de la Loi 21, il
+        laisse expirer son bouclier constitutionnel. Un −2 serait défendable.
+
+  Frechette:         # Coalition avenir Québec
+    as_of: "2026-09-17"
+    souverainete: nationaliste
+    S1:
+      note: 1
+      just: >
+        Maintien du seuil d'immigration permanente à 45 000 par année jusqu'en
+        2029.
+      src: [lapresse_promesses_immigration]
+      contest: >
+        Score incertain. Le maintien est un statu quo (0), mais il reconduit un
+        niveau que la CAQ avait elle-même abaissé, et l'immigration temporaire
+        n'est pas encore sourcée. À trancher avec les chiffres du temporaire.
+    S5:
+      note: 2
+      just: >
+        Verrouille la Loi 21 jusqu'en 2031. La laïcité renforcée est entrée en
+        vigueur en 2026.
+      src: [lapresse_laicite_engagements, jisr_laicite_renforcee]
+
+  St-Pierre Plamondon:   # Parti québécois
+    as_of: "2026-09-17"
+    souverainete: independantiste
+    S1:
+      note: 2
+      just: >
+        Engagement à réduire de moitié l'immigration temporaire et à imposer un
+        moratoire sur l'immigration économique permanente.
+      src: [radiocanada_pq_seuils, lapresse_promesses_immigration]
+    S5:
+      note: 2
+      just: >
+        Veut aller plus loin que la Loi 21 actuelle. Fait campagne contre
+        l'engagement du PLQ de ne pas reconduire la disposition dérogatoire.
+      src: [lapresse_laicite_engagements, pq_communique_laicite]
+
+  Duhaime:           # Parti conservateur du Québec
+    as_of: "2026-09-17"
+    souverainete: nationaliste
+    S1:
+      note: 2
+      just: >
+        Réduction de 20 000 à 10 000 des admissions au titre du regroupement
+        familial et des réfugiés. Refus de seuils fixes, jugés un « piège » :
+        planification construite depuis des tables régionales. Critère de pays
+        d'origine « démocratique » pesant autant que la maîtrise du français.
+        Réduction de 25 % de l'aide sociale aux demandeurs d'asile, priorité aux
+        Québécois pour certains logements et places en garderie subventionnée.
+      src: [lactualite_pcq_democratiques, apdq_pcq_plan, lequotidien_duhaime]
+    S5:
+      note: 1
+      just: >
+        Soutient la Loi 21, présentée comme un compromis entre le droit des
+        citoyens à un service neutre et celui des employés de l'État d'afficher
+        leur religion — position plus modérée que CAQ et PQ. Mais assume le
+        critère de « compatibilité culturelle » dans la sélection.
+      src: [lapresse_laicite_engagements, quebecnouvelles_duhaime_compatibilite]
+
+sources:
+  lapresse_qs_seuils:
+    titre: "Québec solidaire propose un seuil de 70 000 immigrants permanents par année"
+    auteur: "La Presse"
+    date: "2026-09-01"
+    rang: 5
+    url: "https://www.lapresse.ca/elections-quebecoises/2026-09-01/quebec-solidaire-propose-un-seuil-de-70-000-immigrants-permanents-par-annee.php"
+    consulte: "2026-09-17"
+  lapresse_promesses_immigration:
+    titre: "Toutes les promesses des partis — Immigration"
+    auteur: "La Presse"
+    date: "2026-09-10"
+    rang: 5
+    url: "https://www.lapresse.ca/elections-quebecoises/campagne-electorale/toutes-les-promesses-des-partis/2026-09-10/immigration.php"
+    consulte: "2026-09-17"
+    acces: "HTTP 403 (paywall) — contenu obtenu via résumé de recherche, à reconfirmer via navigateur connecté"
+  lapresse_laicite_engagements:
+    titre: "Quels sont les engagements des partis en matière de laïcité ?"
+    auteur: "La Presse (Dialogue / Opinions)"
+    date: "2026-09-01"
+    rang: 5
+    url: "https://www.lapresse.ca/dialogue/opinions/2026-09-01/elections-quebecoises/quels-sont-les-engagements-des-partis-en-matiere-de-laicite.php"
+    consulte: "2026-09-17"
+    acces: "page d'opinion — à recouper avec une source factuelle"
+  pq_communique_laicite:
+    titre: "Un gouvernement du PLQ mènerait à l'abolition de la laïcité au Québec"
+    auteur: "Parti québécois (communiqué)"
+    rang: 1
+    url: "https://pq.org/nouvelles/laicite-un-gouvernement-du-plq-menerait-a-labolition-de-la-laicite-au-quebec-selon-le-parti-quebecois/"
+    consulte: "2026-09-17"
+    acces: "source partisane — utilisable pour la position du PQ, pas pour celle du PLQ"
+  radiocanada_pq_seuils:
+    titre: "Le Parti québécois veut revoir les seuils d'immigration"
+    auteur: "Radio-Canada"
+    rang: 5
+    url: "https://ici.radio-canada.ca/tele/videos/10747980/elections-quebec-2026-parti-quebecois-veut-revoir-seuils-immigration"
+    consulte: "2026-09-17"
+  lactualite_pcq_democratiques:
+    titre: "Immigration : le PCQ favoriserait les ressortissants de pays « démocratiques »"
+    auteur: "L'actualité"
+    rang: 5
+    url: "https://lactualite.com/actualites/immigration-le-pcq-favoriserait-les-ressortissants-de-pays-democratiques/"
+    consulte: "2026-09-17"
+  apdq_pcq_plan:
+    titre: "Duhaime dévoile son plan immigration : régionalisation, valeurs et rapatriement des pouvoirs"
+    auteur: "Actualité politique du Québec"
+    rang: 5
+    url: "https://actualitepolitiqueduquebec.com/p/duhaime-devoile-son-plan-immigration"
+    consulte: "2026-09-17"
+  lequotidien_duhaime:
+    titre: "Duhaime vise une immigration « démocratique », Milliard dénonce un projet numérique"
+    auteur: "Le Quotidien"
+    date: "2026-09-14"
+    rang: 5
+    url: "https://www.lequotidien.com/elections-provinciales-2026/2026/09/14/duhaime-vise-une-immigration-economique-et-democratique-XGU5WGTRZNFEDL7RUVSR3XTEZI/"
+    consulte: "2026-09-17"
+  quebecnouvelles_duhaime_compatibilite:
+    titre: "Éric Duhaime assume désormais complètement le critère de compatibilité culturelle"
+    auteur: "Québec Nouvelles (Substack)"
+    rang: 5
+    url: "https://quebecnouvelles.substack.com/p/immigration-eric-duhaime-assume-desormais"
+    consulte: "2026-09-17"
+    acces: "blogue — à recouper"
+  jisr_laicite_renforcee:
+    titre: "Québec 2026 : la laïcité renforcée entre en vigueur"
+    auteur: "Jisr.media"
+    rang: 5
+    url: "https://jisr.media/fr/articles/fr-100/"
+    consulte: "2026-09-17"
+    acces: "média peu connu — à recouper"

@@ -1,0 +1,56 @@
+# Exemple de notation sourcée — à valider avant de l'appliquer aux 19 entités.
+# Démonstration sur une seule entité, axe Économie uniquement.
+
+- name: Milliard
+  party: Parti libéral du Québec
+  country: Québec
+  color: "#ED1B2E"
+  as_of: "2026-09-17"          # horodatage : le scrutin du 5 oct. peut invalider
+  souverainete: federaliste     # attribut catégoriel, hors axes
+
+  economie:
+    E1:
+      note: 0
+      just: >
+        N'est pas un parti de baisse d'impôts. Annule les mesures de détaxation
+        de la CAQ (taxe de Bienvenue, congé de TVQ à l'épicerie) et recentre les
+        crédits d'impôt aux sociétés (CRIC, C3i) pour +600 M$ en année 5. Seul
+        allègement notable : TVQ sur les constructions neuves (−125 M$/an).
+      src: [plq_cadre_2026]
+    E2:
+      note: 1
+      just: >
+        Engagements de 11,9 G$ financés par une « réforme de l'État »
+        (gouvernance, efficacité, numérique) et la décroissance de
+        l'interventionnisme économique. Aucun programme de privatisation.
+      src: [plq_cadre_2026, lesaffaires_cadres_2026]
+    E3:
+      note: -1
+      just: >
+        Réinvestissement en santé et soins à domicile (jusqu'à −350 M$/an),
+        croissance des dépenses de près de 5 %/an pour le portefeuille santé et
+        3 % pour l'éducation, parité salariale en Outaouais, plateforme de
+        télésanté.
+      src: [plq_cadre_2026]
+    E4: null   # marché du travail — non sourcé
+    E5: null   # régulation — non sourcé
+
+  # 3 indicateurs sur 5 → sous le seuil de 4 fixé par la grille.
+  # Position NON calculée. Statut : incomplet.
+  fiabilite: incomplet
+
+sources:
+  plq_cadre_2026:
+    titre: "Rassembler. Réparer. Bâtir. — Cadre financier 2026-2027 à 2030-2031"
+    auteur: "Parti libéral du Québec"
+    date: "2026-09-13"
+    rang: 1           # texte primaire
+    url: "https://plq.org/PLQ_Cadre_financier.pdf"
+    consulte: "2026-09-17"
+  lesaffaires_cadres_2026:
+    titre: "Élections Québec 2026 : les cadres financiers des 5 principaux partis en bref"
+    auteur: "Les Affaires"
+    rang: 5           # presse de référence
+    url: "https://www.lesaffaires.com/secteurs/politique/elections-quebec-2026-les-cadres-financiers-des-5-principaux-partis-en-bref"
+    consulte: "2026-09-17"
+    acces: "HTTP 403 — résumé obtenu via les résultats de recherche, à reconfirmer"

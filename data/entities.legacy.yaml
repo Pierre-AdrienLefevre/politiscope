@@ -1,0 +1,283 @@
+# Compas politique comparé : données
+# Mis à jour : 17 septembre 2026
+#
+# Échelles (de -10 à +10)
+#   eco      : -10 socialiste      ->  +10 libéral (économie de marché)
+#   valeurs  : -10 progressiste    ->  +10 conservateur
+#   autorite : -10 libertaire      ->  +10 autoritaire
+#
+# label_pos (optionnel) : position de l'étiquette sur le graphique
+#   top center, bottom center, middle left, middle right, top left, top right,
+#   bottom left, bottom right
+#
+# Les positions sont des estimations basées sur les programmes, les votes et
+# les mesures prises. Elles restent discutables : modifiez-les librement.
+
+meta:
+  updated: "17 Septembre 2026"
+
+entities:
+
+  # ---------------------------------------------------------------- États-Unis
+  - name: Trump
+    party: Parti républicain
+    country: États-Unis
+    color: "#C0392B"
+    eco: 3
+    valeurs: 6
+    autorite: 8
+    note: >
+      Économie mixte : prolongation des baisses d'impôts, réduction de la
+      fonction publique fédérale et dérégulation, mais droits de douane élevés
+      et interventions directes dans l'industrie (prise de participation dans
+      Intel). Positions conservatrices sur l'immigration et les questions de
+      société. Recours intensif aux décrets, déploiement de la Garde nationale
+      dans plusieurs villes et conflits avec les tribunaux et les agences
+      indépendantes ; ses partisans y voient l'application de son mandat.
+
+  - name: Parti démocrate
+    party: Parti démocrate
+    country: États-Unis
+    color: "#2E6DB4"
+    eco: -2
+    valeurs: -5
+    autorite: -1
+    note: >
+      Coalition large allant du centre à la gauche. Économie de marché
+      régulée, extension de la couverture santé, investissements publics dans
+      l'énergie et les infrastructures. Progressiste sur les questions de
+      société (avortement, droits LGBT). Aile progressiste plus à gauche
+      (Sanders, Ocasio-Cortez) et aile centriste plus modérée.
+
+  # -------------------------------------------------------------------- Canada
+  - name: Carney
+    party: Parti libéral du Canada
+    country: Canada
+    color: "#D71920"
+    eco: 2
+    valeurs: -2
+    autorite: 1
+    note: >
+      Premier ministre. Ancien gouverneur de la Banque du Canada et de la
+      Banque d'Angleterre. Centriste pragmatique : abolition de la taxe carbone
+      pour les consommateurs, hausse des dépenses de défense, grands projets
+      d'infrastructure, diversification commerciale face aux tarifs américains.
+      Modérément progressiste sur les questions de société.
+
+  - name: Poilievre
+    party: Parti conservateur du Canada
+    country: Canada
+    color: "#1A4782"
+    eco: 6
+    valeurs: 4
+    autorite: 2
+    note: >
+      Chef de l'opposition. Baisses d'impôts, réduction des dépenses fédérales,
+      opposition à la taxe carbone, accélération des projets énergétiques.
+      Discours de fermeté sur la criminalité. Populisme économique centré sur
+      le coût de la vie et le logement.
+
+  - name: NPD
+    party: Nouveau Parti démocratique
+    country: Canada
+    color: "#F37021"
+    eco: -5
+    valeurs: -5
+    autorite: -2
+    label_pos: bottom center
+    note: >
+      Social-démocrate. Assurance médicaments et soins dentaires publics,
+      logement abordable, droits des travailleurs, taxation des grandes
+      fortunes. Progressiste sur les questions de société et d'environnement.
+
+  # -------------------------------------------------------------------- Québec
+  - name: Fréchette
+    party: Coalition avenir Québec
+    country: Québec
+    color: "#00A8E0"
+    eco: 2
+    valeurs: 4
+    autorite: 3
+    note: >
+      Première ministre sortante, cheffe de la CAQ depuis avril 2026 après le
+      départ de François Legault. Ancienne ministre de l'Économie. Centre
+      économique, nationalisme québécois : laïcité (Loi 21), protection du
+      français, baisse des seuils d'immigration. Cherche à se distinguer du
+      bilan de son prédécesseur.
+
+  - name: Milliard
+    party: Parti libéral du Québec
+    country: Québec
+    color: "#ED1B2E"
+    eco: 3
+    valeurs: -2
+    autorite: 0
+    label_pos: bottom center
+    note: >
+      Chef depuis février 2026, ancien président de la Fédération des chambres
+      de commerce du Québec. Centre-droit économique, pro-entreprises,
+      fédéraliste. Plus ouvert sur l'immigration et plus critique de la Loi 21
+      que la CAQ et le PQ.
+
+  - name: St-Pierre Plamondon
+    party: Parti québécois
+    country: Québec
+    color: "#004C9D"
+    eco: -2
+    valeurs: 4
+    autorite: 3
+    label_pos: middle left
+    note: >
+      Souverainiste : promesse d'un référendum dans un premier mandat.
+      Social-démocrate sur le plan historique, mais cadre financier axé sur le
+      retour à l'équilibre budgétaire et la réduction de la bureaucratie.
+      Positions fermes sur la laïcité, le français et la baisse de
+      l'immigration.
+
+  - name: Ghazal
+    party: Québec solidaire
+    country: Québec
+    color: "#FF5505"
+    eco: -7
+    valeurs: -7
+    autorite: -3
+    note: >
+      Porte-parole de QS. Gauche écologiste et souverainiste : transition
+      énergétique, renforcement des services publics, logement social, hausse
+      de la fiscalité des plus aisés. Progressiste sur les questions de
+      société.
+
+  - name: Duhaime
+    party: Parti conservateur du Québec
+    country: Québec
+    color: "#1B3A6B"
+    eco: 7
+    valeurs: 4
+    autorite: -4
+    note: >
+      Libertarien sur l'économie et les libertés individuelles : plus de privé
+      en santé, révision du financement des garderies, exploitation des
+      hydrocarbures, troisième lien à Québec. Opposé aux mesures sanitaires
+      pendant la pandémie. Conservateur sur plusieurs questions de société et
+      d'immigration.
+
+  # -------------------------------------------------------------------- France
+  - name: Macron
+    party: Renaissance (président sortant)
+    country: France
+    color: "#E8B400"
+    eco: 4
+    valeurs: -1
+    autorite: 3
+    note: >
+      Président de la République jusqu'en 2027, ne peut pas se représenter.
+      Politique de l'offre : baisses d'impôts sur les entreprises, réforme des
+      retraites, flexibilisation du marché du travail. Pro-européen. Recours
+      répété au 49.3 et loi immigration de 2024 durcie en cours de débat.
+
+  - name: Attal
+    party: Renaissance
+    country: France
+    color: "#FFC600"
+    eco: 4
+    valeurs: -2
+    autorite: 2
+    label_pos: bottom center
+    note: >
+      Candidat déclaré à la présidentielle 2027 (mai 2026), secrétaire général
+      de Renaissance. Ligne libérale et pro-européenne dans la continuité du
+      macronisme, avec un accent sur l'école, l'autorité et le travail.
+
+  - name: Philippe
+    party: Horizons
+    country: France
+    color: "#1F9EC4"
+    eco: 5
+    valeurs: 1
+    autorite: 2
+    label_pos: middle right
+    note: >
+      Candidat déclaré, ancien Premier ministre. Centre-droit : réduction de la
+      dépense publique, recul de l'âge de départ à la retraite, fermeté sur la
+      sécurité et l'immigration, pro-européen.
+
+  - name: Retailleau
+    party: Les Républicains
+    country: France
+    color: "#0066CC"
+    eco: 5
+    valeurs: 6
+    autorite: 6
+    note: >
+      Candidat de LR désigné par les adhérents, ancien ministre de l'Intérieur.
+      Réduction de la dépense publique et des impôts, forte baisse de
+      l'immigration, fermeté pénale, défense des valeurs traditionnelles.
+
+  - name: Le Pen
+    party: Rassemblement national
+    country: France
+    color: "#0D2A5C"
+    eco: -1
+    valeurs: 6
+    autorite: 6
+    label_pos: middle left
+    note: >
+      Candidate déclarée (juillet 2026) malgré sa condamnation en appel dans
+      l'affaire des assistants parlementaires ; pourvoi en cassation en cours.
+      Économie protectionniste et sociale : opposition au report de l'âge de
+      la retraite, baisse de la TVA sur l'énergie. Priorité nationale,
+      référendum sur l'immigration, fermeté pénale.
+
+  - name: Zemmour
+    party: Reconquête
+    country: France
+    color: "#1C1C1C"
+    eco: 4
+    valeurs: 9
+    autorite: 7
+    note: >
+      Droite identitaire : arrêt de l'immigration, "remigration", fin du
+      regroupement familial, défense de l'identité chrétienne de la France.
+      Économie plus libérale que le RN : baisse des impôts et des charges.
+
+  - name: Glucksmann
+    party: Place publique / PS
+    country: France
+    color: "#E4007C"
+    eco: -3
+    valeurs: -5
+    autorite: -1
+    label_pos: bottom center
+    note: >
+      Social-démocrate pro-européen, soutenu par une partie du PS et des
+      écologistes. Taxation des très hauts patrimoines, investissement dans la
+      transition écologique, soutien ferme à l'Ukraine. Refuse l'alliance avec
+      LFI.
+
+  - name: Roussel
+    party: Parti communiste français
+    country: France
+    color: "#B30000"
+    eco: -8
+    valeurs: 1
+    autorite: 2
+    label_pos: bottom center
+    note: >
+      Candidat déclaré (septembre 2026). Économie socialiste : nationalisations
+      (énergie, banques), hausse des salaires, retraite à 60 ans. Pro-nucléaire,
+      positions plus classiques que le reste de la gauche sur la sécurité et la
+      laïcité.
+
+  - name: Mélenchon
+    party: La France insoumise
+    country: France
+    color: "#CC2443"
+    eco: -8
+    valeurs: -6
+    autorite: 1
+    note: >
+      Candidat déclaré. Gauche radicale : SMIC à 1600 euros net, retraite à 60
+      ans, rétablissement de l'ISF, planification écologique, VIe République.
+      Progressiste sur les questions de société. Critiqué pour la centralisation
+      de son mouvement ; ses soutiens mettent en avant la démocratie
+      participative de son programme.

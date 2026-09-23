@@ -1,0 +1,11 @@
+[project]
+name = "compas-politique-compare"
+# Valeur fixe : la version publiée est la date de la release (tag AAAA.MM.JJ).
+version = "0.0.0"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0, <3.1",
+    "plotly>=7.1, <7.2",
+    "pyyaml>=6.0, <6.1",
+    "streamlit>=1.64, <1.65",
+]

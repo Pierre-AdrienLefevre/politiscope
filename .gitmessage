@@ -1,0 +1,11 @@
+# <type>(<portée>): <résumé à l'impératif, sans point final>
+#
+# Types : feat (nouveauté, nouvelle note), fix (correction, note recalibrée),
+#         docs, refactor, chore, ci. Ils classent les notes de release ;
+#         la version, elle, est la date du merge (AAAA.MM.JJ).
+#
+# Portées usuelles : donnees, grille, carte, questionnaire, partis, methode
+#
+# Exemples :
+#   feat(donnees): noter S7 (justice pénale) pour le PLQ, le PQ et QS
+#   fix(donnees): ramener E2 du RN à +1 après calibrage avec Reconquête

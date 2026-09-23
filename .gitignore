@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Environnement virtuel
+.venv/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+
+
+
+# Instructions locales de l'assistant, hors dépôt
+CLAUDE.md

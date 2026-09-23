@@ -1,0 +1,203 @@
+# Questionnaire — batterie d'items
+#
+# Un item par indicateur de `data/grille.md`, soit 14 questions.
+#
+# Le répondant est positionné par EXACTEMENT la même formule que les partis
+# (`scoring.py`) : moyenne pondérée des notes, renormalisée sur les indicateurs
+# renseignés, rééchelonnée en -10 … +10.
+#
+# ASYMÉTRIE ASSUMÉE. Le répondant note un indicateur sur UNE affirmation ; les
+# partis l'ont été sur un faisceau de documents, de votes et de mesures prises.
+# Le -2 du PCF en fiscalité agrège un programme entier, le -2 du répondant est
+# un avis sur une phrase. La comparaison mesure une direction et une intensité
+# de préférence, pas une équivalence de nature. À dire au répondant.
+#
+# `sens` : +1 si « tout à fait d'accord » vaut +2 sur l'indicateur,
+#          -1 si « tout à fait d'accord » vaut -2.
+# `exemples` : purement illustratif, propre à chaque territoire, JAMAIS noté.
+#   Sert à rendre l'item concret sans compromettre sa comparabilité.
+
+meta:
+  echelle:
+    2: Tout à fait d'accord
+    1: Plutôt d'accord
+    0: Ni d'accord ni pas d'accord
+    -1: Plutôt pas d'accord
+    -2: Pas du tout d'accord
+  sans_opinion: >
+    « Sans opinion » retire l'item du calcul et renormalise les poids, au lieu
+    de le compter comme un 0. Une absence d'avis n'est pas une position
+    centriste, même règle que pour les partis.
+
+items:
+
+  # ------------------------------------------------------------------ Économie
+  - indicateur: E1
+    enonce: >
+      Les personnes les plus fortunées devraient payer nettement plus d'impôts
+      qu'aujourd'hui, y compris sur leur patrimoine.
+    sens: -1
+    exemples:
+      Québec: "Ex. : impôt sur la fortune de 1 % au-delà de 25 M$ proposé par Québec solidaire."
+      France: "Ex. : taxe Zucman de 2 % au-delà de 100 M€, rétablissement de l'ISF."
+      Canada: "Ex. : taxation des grandes fortunes proposée par le NPD."
+      États-Unis: "Ex. : wealth tax, hausse du taux marginal supérieur."
+
+  - indicateur: E2
+    enonce: >
+      L'État devrait posséder et diriger lui-même les entreprises des secteurs
+      stratégiques : énergie, transports, banques.
+    sens: -1
+    exemples:
+      Québec: "Ex. : Hydro-Québec, société d'État ; débat sur son périmètre."
+      France: "Ex. : renationalisation d'EDF et de la SNCF, pôle public bancaire."
+      Canada: "Ex. : sociétés d'État fédérales, Postes Canada."
+      États-Unis: "Ex. : prise de participation publique dans Intel."
+
+  - indicateur: E3a
+    enonce: >
+      Les soins de santé doivent rester entièrement publics : le privé ne
+      devrait pas pouvoir vendre en parallèle les mêmes soins.
+    sens: -1
+    exemples:
+      Québec: "Ex. : monopole de la RAMQ, que le PCQ veut ouvrir à l'assurance privée duplicative."
+      France: "Ex. : « 100 % Sécu », place des complémentaires."
+      Canada: "Ex. : Loi canadienne sur la santé, interdiction de la surfacturation."
+      États-Unis: "Ex. : Medicaid, Medicare for All, assurance employeur."
+
+  - indicateur: E3b
+    enonce: >
+      Les allocations chômage devraient être versées plus longtemps et à un
+      niveau plus élevé qu'aujourd'hui.
+    sens: -1
+    exemples:
+      France: "Ex. : durée d'indemnisation après rupture conventionnelle, dégressivité de l'allocation."
+      Canada: "Ex. : seuil d'admissibilité en heures, durée et plancher de la prestation."
+      Québec: "Ex. : l'assurance-emploi relève du fédéral, cet item ne départage donc pas les partis québécois."
+      États-Unis: "Ex. : régimes administrés État par État, durée et montant très variables."
+    note_interne: >
+      Issu de la scission de l'ancien indicateur E3, qui agrégeait santé et
+      chômage. Les cinq partis québécois y sont `absent` faute de compétence
+      provinciale, et les deux partis américains ne sont pas encore recherchés :
+      un répondant verra donc sa réponse comptée face aux partis français et
+      canadiens, et ignorée face aux sept autres.
+
+  - indicateur: E4
+    enonce: >
+      Il faudrait pouvoir partir à la retraite plus tôt, quitte à augmenter les
+      cotisations pour le financer.
+    sens: -1
+    exemples:
+      France: "Ex. : retraite à 60 ans contre report à 64 ans ; pilier de capitalisation."
+      Québec: "Ex. : paramètres du Régime de rentes du Québec."
+      Canada: "Ex. : âge d'admissibilité à la Sécurité de la vieillesse."
+      États-Unis: "Ex. : âge de la Social Security, comptes individuels."
+    note_interne: >
+      Indicateur très discriminant en France, presque vide au Québec : les
+      partis québécois y sont majoritairement `absent`. La comparaison
+      France/Québec sur cet item portera donc sur peu de monde.
+
+  - indicateur: E5
+    enonce: >
+      Le salaire minimum devrait être augmenté fortement, même si cela pèse sur
+      les entreprises.
+    sens: -1
+    exemples:
+      Québec: "Ex. : 20 $/h proposé par Québec solidaire contre 16,60 $ actuels."
+      France: "Ex. : SMIC à 1 700 € net contre 1 443 € actuels."
+      Canada: "Ex. : salaire minimum fédéral et provinciaux."
+      États-Unis: "Ex. : Fight for $15, salaire minimum fédéral à 7,25 $."
+
+  - indicateur: E6
+    enonce: >
+      L'État devrait encadrer directement les prix des biens essentiels :
+      énergie, alimentation, logement.
+    sens: -1
+    exemples:
+      Québec: "Ex. : plafonnement des hausses de loyer à l'inflation."
+      France: "Ex. : blocage des prix par décret, tarifs réglementés de l'électricité."
+      Canada: "Ex. : contrôle des loyers provincial."
+      États-Unis: "Ex. : rent control, plafonnement du prix de l'insuline."
+
+  # ------------------------------------------------------------------- Société
+  - indicateur: S1
+    enonce: >
+      Le nombre de personnes admises à immigrer chaque année devrait être
+      fortement réduit.
+    sens: 1
+    exemples:
+      Québec: "Ex. : seuil de 45 000 admissions permanentes ; moratoire proposé par le PQ."
+      France: "Ex. : suppression du droit du sol, restriction du regroupement familial."
+      Canada: "Ex. : cibles fédérales d'immigration permanente et temporaire."
+      États-Unis: "Ex. : plafonds d'admission, quotas de réfugiés."
+
+  - indicateur: S2
+    enonce: >
+      L'accès à l'avortement doit être garanti par la loi et entièrement pris en
+      charge par le système public.
+    sens: -1
+    exemples:
+      France: "Ex. : liberté de recourir à l'IVG inscrite dans la Constitution en mars 2024."
+      Québec: "Ex. : plan d'accès à l'avortement ; compétence partagée avec le fédéral."
+      Canada: "Ex. : absence de loi encadrant l'avortement depuis 1988."
+      États-Unis: "Ex. : interdictions d'État après la chute de Roe v. Wade."
+
+  - indicateur: S3
+    enonce: >
+      Une personne devrait pouvoir changer la mention de son genre à l'état
+      civil sur simple déclaration, sans passer par un juge ni un médecin.
+    sens: -1
+    exemples:
+      France: "Ex. : déjudiciarisation proposée par le PS et LFI, sur le modèle allemand."
+      Québec: "Ex. : encadrement des soins de transition des mineurs."
+      Canada: "Ex. : mention de genre sur les documents fédéraux."
+      États-Unis: "Ex. : restrictions d'État sur les soins d'affirmation de genre."
+
+  - indicateur: S4
+    enonce: >
+      Une personne atteinte d'une maladie incurable devrait pouvoir demander une
+      aide médicale à mourir, y compris à l'avance pour le cas où elle perdrait
+      ses facultés.
+    sens: -1
+    exemples:
+      Québec: "Ex. : demandes anticipées d'aide médicale à mourir, légalisées."
+      France: "Ex. : loi du 18 août 2026, qui EXCLUT les demandes anticipées."
+      Canada: "Ex. : aide médicale à mourir fédérale et ses critères d'admissibilité."
+      États-Unis: "Ex. : lois d'aide à mourir, État par État."
+    note_interne: >
+      Item délibérément construit sur la demande anticipée : c'est ce qui
+      sépare le droit québécois du droit français, et donc l'endroit où la
+      comparaison entre territoires est la plus informative.
+
+  - indicateur: S5
+    enonce: >
+      L'État devrait restreindre le port de signes religieux visibles dans les
+      services publics.
+    sens: 1
+    exemples:
+      Québec: "Ex. : Loi 21, qui vise les agents de l'État en position d'autorité."
+      France: "Ex. : loi de 2004 à l'école ; propositions d'extension à l'université."
+      Canada: "Ex. : contestation fédérale de la Loi 21."
+      États-Unis: "Ex. : liberté religieuse au premier amendement."
+
+  - indicateur: S6
+    enonce: >
+      L'argent public devrait financer uniquement l'école publique, et non les
+      établissements privés.
+    sens: -1
+    exemples:
+      Québec: "Ex. : écoles privées subventionnées ; moratoire que le PCQ veut lever."
+      France: "Ex. : enseignement privé sous contrat, que le PCF veut définancer."
+      Canada: "Ex. : financement des écoles confessionnelles selon les provinces."
+      États-Unis: "Ex. : school vouchers, charter schools."
+
+  - indicateur: S7
+    enonce: >
+      Face à la délinquance, il faut privilégier des peines plus sévères et plus
+      systématiques plutôt que la réinsertion.
+    sens: 1
+    exemples:
+      France: "Ex. : peines minimales, majorité pénale à 15 ans, suppression des aménagements."
+      Québec: "Ex. : renforts policiers et de procureurs."
+      Canada: "Ex. : peines minimales obligatoires, débats sur la mise en liberté sous caution."
+      États-Unis: "Ex. : mandatory minimums, three-strikes laws."

@@ -1,0 +1,29 @@
+# Thème de l'app : registre éditorial, fond papier, titres à empattements.
+# Les couleurs des graphiques Plotly sont définies à part, dans `commun.py`,
+# et doivent rester accordées à celles-ci.
+
+[theme]
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap, sans-serif"
+# Un nom de police contenant un chiffre (« Source Serif 4 ») invalide la règle
+# CSS générée : les titres retombaient silencieusement sur la police du texte.
+headingFont = "Newsreader:https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap, serif"
+headingFontWeights = [700, 600, 600, 600, 600, 600]
+baseRadius = "0.6rem"
+showWidgetBorder = true
+metricValueFontSize = "2rem"
+
+[theme.light]
+primaryColor = "#1f3a5f"
+backgroundColor = "#faf8f3"
+secondaryBackgroundColor = "#f1ede4"
+textColor = "#1c1b19"
+borderColor = "#e2dccf"
+linkColor = "#1f3a5f"
+
+[theme.dark]
+primaryColor = "#8fb3e0"
+backgroundColor = "#15171a"
+secondaryBackgroundColor = "#1f2227"
+textColor = "#ecebe6"
+borderColor = "#30343a"
+linkColor = "#8fb3e0"
