@@ -235,6 +235,9 @@ function legendeCarte(partis, vous) {
     ${vous ? "<span>Violet : votre position</span>" : ""}</div>`;
 }
 
+/** Sous le titre « Économie », « Gauche économique » se lit « Gauche ». */
+const court = (pole) => pole.replace(/ économique$/, "");
+
 /** Les deux positions en grands chiffres, avec leur règle de −10 à +10. */
 function scoresHTML(positions, point) {
   return `<div class="scores">${Object.entries(D.axes).map(([axe, def]) => {
@@ -244,7 +247,7 @@ function scoresHTML(positions, point) {
       <div class="score-titre">${esc(def.libelle)}</div>
       <div class="score-valeur">${signe(v)}</div>
       <div class="regle" role="img" aria-label="${signe(v)} sur une échelle de −10 (${esc(def.poles[0])}) à +10 (${esc(def.poles[1])})"><i style="left:${(v + 10) * 5}%;--point:${point}"></i></div>
-      <div class="poles"><span>${esc(def.poles[0])}</span><span>${esc(def.poles[1])}</span></div>
+      <div class="poles">${def.poles.map((pole) => `<span>${esc(court(pole))}</span>`).join("")}</div>
       ${pos.mesuree === false ? '<div class="score-note">Position estimée, pas encore mesurée</div>' : ""}
     </div>`;
   }).join("")}</div>`;

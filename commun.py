@@ -51,7 +51,7 @@ ECOLOGIE_LIBELLE = {
 
 # Libellés des pôles pour le lecteur : « État » et « Marché » seuls ne disent
 # pas dans quel sens va l'axe. Les données gardent les termes de la grille.
-POLES_AFFICHES = {"economie": ("Redistribution", "Libre marché")}
+POLES_AFFICHES = {"economie": ("Gauche économique", "Droite économique")}
 
 POLICE = "Inter, sans-serif"
 POLICE_TITRES = "Newsreader, serif"
