@@ -9,3 +9,8 @@ dependencies = [
     "pyyaml>=6.0, <6.1",
     "streamlit>=1.64, <1.65",
 ]
+
+[dependency-groups]
+site = [
+    "markdown>=3.11, <3.12",
+]

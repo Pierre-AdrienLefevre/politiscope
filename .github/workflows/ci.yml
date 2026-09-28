@@ -31,13 +31,16 @@ jobs:
         run: uv lock --check
 
       - name: Installation des dépendances (lock exact)
-        run: uv sync --frozen
+        run: uv sync --frozen --group site
 
       - name: Intégrité des données (sources, notes, bornes, champs)
         run: uv run --no-sync python valider.py
 
       - name: Exécution de l'app sur toutes les pages
         run: uv run --no-sync python scripts/verifier_app.py
+
+      - name: Construction du site statique
+        run: uv run --no-sync python scripts/construire_site.py
 
   securite:
     name: Audit de sécurité
