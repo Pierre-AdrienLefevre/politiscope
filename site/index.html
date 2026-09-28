@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politiscope</title>
+  <meta name="description" content="Dix-huit partis des États-Unis, du Canada, du Québec et de France placés sur les mêmes axes, à partir de leurs programmes, de leurs votes et des mesures prises. Situez-vous parmi eux.">
+  <meta property="og:title" content="Politiscope">
+  <meta property="og:description" content="Dix-huit partis de quatre démocraties placés sur les mêmes axes, chaque note sourcée.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317202b'/%3E%3Cpath d='M16 5v22M5 16h22' stroke='%23eef0ec' stroke-width='2'/%3E%3Ccircle cx='21' cy='11' r='4' fill='%23eef0ec'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="evitement" href="#contenu">Aller au contenu</a>
+  <header class="bandeau">
+    <a class="marque" href="#/carte" aria-label="Politiscope, retour à la carte">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v26M3 16h26"/><circle cx="21.5" cy="10.5" r="4.5"/></svg>
+      <span>Politiscope</span>
+    </a>
+    <nav class="onglets" aria-label="Pages">
+      <a href="#/carte" data-page="carte">Carte</a>
+      <a href="#/questionnaire" data-page="questionnaire">Me situer</a>
+      <a href="#/comparer" data-page="comparer">Comparer</a>
+      <a href="#/methode" data-page="methode">Méthode</a>
+    </nav>
+  </header>
+
+  <main id="contenu" tabindex="-1">
+    <p class="chargement">Chargement des données…</p>
+  </main>
+
+  <footer class="pied">
+    <p>Positions établies à partir des programmes, des votes et des mesures prises<span id="date-donnees"></span>.</p>
+    <p><a href="https://github.com/Pierre-AdrienLefevre/politiscope/releases">Versions datées</a> <a href="https://github.com/Pierre-AdrienLefevre/politiscope">Code et données</a></p>
+  </footer>
+
+  <div class="bulle" id="bulle" role="tooltip" hidden></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

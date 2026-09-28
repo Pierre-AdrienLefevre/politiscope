@@ -1,0 +1,56 @@
+name: Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois ; celui en cours va à son terme.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construire:
+    name: Construire le site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v7
+
+      - name: Installation de uv (cache intégré)
+        uses: astral-sh/setup-uv@v8.2.0
+        with:
+          python-version: '3.14'
+          enable-cache: true
+          cache-dependency-glob: "uv.lock"
+
+      - name: Installation des dépendances (lock exact)
+        run: uv sync --frozen --group site
+
+      - name: Construction (positions calculées par scoring.py)
+        run: uv run --no-sync python scripts/construire_site.py
+
+      - name: Envoi du site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deployer:
+    name: Déployer sur GitHub Pages
+    needs: construire
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploiement.outputs.page_url }}
+
+    steps:
+      - name: Déploiement
+        id: deploiement
+        uses: actions/deploy-pages@v5

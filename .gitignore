@@ -15,3 +15,4 @@ __pycache__/
 
 # Instructions locales de l'assistant, hors dépôt
 CLAUDE.md
+_site/
