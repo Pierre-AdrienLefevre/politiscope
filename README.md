@@ -1,4 +1,4 @@
-# Compas politique comparé
+# Politiscope
 
 Carte interactive des principales figures politiques des États-Unis, du Canada,
 du Québec et de la France, positionnées sur deux axes **communs aux quatre

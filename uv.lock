@@ -158,33 +158,6 @@ wheels = [
 ]
 
 [[package]]
-name = "compas-politique-compare"
-version = "0.0.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "pandas" },
-    { name = "plotly" },
-    { name = "pyyaml" },
-    { name = "streamlit" },
-]
-
-[package.dev-dependencies]
-site = [
-    { name = "markdown" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "pandas", specifier = ">=3.0,<3.1" },
-    { name = "plotly", specifier = ">=7.1,<7.2" },
-    { name = "pyyaml", specifier = ">=6.0,<6.1" },
-    { name = "streamlit", specifier = ">=1.64,<1.65" },
-]
-
-[package.metadata.requires-dev]
-site = [{ name = "markdown", specifier = ">=3.11,<3.12" }]
-
-[[package]]
 name = "h11"
 version = "0.16.0"
 source = { registry = "https://pypi.org/simple" }
@@ -487,6 +460,33 @@ sdist = { url = "https://files.pythonhosted.org/packages/49/c3/72b369f5ed7701b04
 wheels = [
     { url = "https://files.pythonhosted.org/packages/e5/7d/905a3a3d51087515719058c94cfbda2ff0fc14417c20d557ae3e82d8b250/plotly-7.1.0-py3-none-any.whl", hash = "sha256:dbb7fa18afce40d0a8e80d1bf162eceb3faa0ce5a77fe741ad09a74cf78f53f3", size = 9692368, upload-time = "2026-09-15T19:21:18.331Z" },
 ]
+
+[[package]]
+name = "politiscope"
+version = "0.0.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pandas" },
+    { name = "plotly" },
+    { name = "pyyaml" },
+    { name = "streamlit" },
+]
+
+[package.dev-dependencies]
+site = [
+    { name = "markdown" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "pandas", specifier = ">=3.0,<3.1" },
+    { name = "plotly", specifier = ">=7.1,<7.2" },
+    { name = "pyyaml", specifier = ">=6.0,<6.1" },
+    { name = "streamlit", specifier = ">=1.64,<1.65" },
+]
+
+[package.metadata.requires-dev]
+site = [{ name = "markdown", specifier = ">=3.11,<3.12" }]
 
 [[package]]
 name = "protobuf"

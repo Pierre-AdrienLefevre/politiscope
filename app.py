@@ -1,4 +1,4 @@
-"""Compas politique comparé : États-Unis, Canada, Québec, France.
+"""Politiscope : États-Unis, Canada, Québec, France.
 
 Point d'entrée : déclare les pages, qui vivent dans `vues/`. Les positions
 affichées sont calculées par `scoring.py` à partir des indicateurs sourcés de
@@ -11,7 +11,7 @@ import streamlit as st
 
 from commun import charger
 
-st.set_page_config(page_title="Compas politique comparé", page_icon="🧭", layout="wide")
+st.set_page_config(page_title="Politiscope", page_icon="🧭", layout="wide")
 
 page = st.navigation(
     [
