@@ -1,5 +1,5 @@
 [project]
-name = "compas-politique-compare"
+name = "politiscope"
 # Valeur fixe : la version publiée est la date de la release (tag AAAA.MM.JJ).
 version = "0.0.0"
 requires-python = ">=3.14"

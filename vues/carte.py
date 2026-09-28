@@ -174,7 +174,7 @@ def render_fiche(row: pd.Series, axes: dict, sources: dict) -> None:
 # ---------------------------------------------------------------------------- page
 df, meta, axes, sources, entites = charger()
 
-st.title("Compas politique comparé")
+st.title("Politiscope")
 st.caption(f"{len(df)} partis de quatre territoires, placés sur les mêmes axes.")
 
 with st.container(horizontal=True, vertical_alignment="center"):
